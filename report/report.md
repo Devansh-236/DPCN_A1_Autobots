@@ -24,18 +24,16 @@ header-includes: |
 
 # Team Name
 
-**[TEAM NAME]**
+**Autobots**
 
 | Roll number | Name |
-|---|---|
-| [ROLL] | [MEMBER 1] |
-| [ROLL] | [MEMBER 2] |
-| [ROLL] | [MEMBER 3] |
-| [ROLL] | [MEMBER 4] |
+|:--|:--|
+| 2023102042 | Devansh Varshney |
+| [ROLL] | Vansh Agarwal |
 
 # GitHub Link to Our Code
 
-**[https://github.com/ORG/REPO](https://github.com/ORG/REPO)**
+**[https://github.com/Devansh-236/DPCN\_assignment-1-Autobots](https://github.com/Devansh-236/DPCN_assignment-1-Autobots)**
 
 The repository contains the complete, reproducible pipeline. `python src/run_all.py` regenerates
 every number and every figure in this report from the raw CSV in one command.
@@ -384,10 +382,8 @@ than on particular ties.
 
 | Member | Tasks completed |
 |:---|:---|
-| [MEMBER 1] | [e.g. data cleaning and encoding decisions (`prepare_data.py`); dataset documentation section] |
-| [MEMBER 2] | [e.g. similarity design, permutation null model and thresholding (`build_network.py`); pipeline section] |
-| [MEMBER 3] | [e.g. network metrics, community detection, random-graph baselines (`analyze.py`); analysis section] |
-| [MEMBER 4] | [e.g. all nine visualisations (`visualize.py`, `viz_style.py`); results and discussion section] |
+| Devansh Varshney | [e.g. data cleaning and encoding decisions (`prepare_data.py`); similarity design, permutation null model and thresholding (`build_network.py`); dataset documentation and pipeline sections] |
+| Vansh Agarwal | [e.g. network metrics, community detection and random-graph baselines (`analyze.py`); all nine visualisations (`visualize.py`, `viz_style.py`); analysis, results and discussion sections] |
 
-*All members jointly reviewed the methodology, agreed the interpretation of the seven communities,
-and proof-read the final report.*
+*Both members jointly reviewed the methodology, agreed the interpretation of the seven
+communities, and proof-read the final report.*

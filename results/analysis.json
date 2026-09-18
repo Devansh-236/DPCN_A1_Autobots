@@ -1,0 +1,1196 @@
+{
+  "main_network": {
+    "nodes": 87,
+    "edges": 88,
+    "density": 0.0235,
+    "avg_degree": 2.023,
+    "max_degree": 7,
+    "min_degree": 0,
+    "median_degree": 1.0,
+    "degree_sd": 1.702,
+    "isolates": 13,
+    "components": 19,
+    "giant_size": 61,
+    "giant_share": 0.701,
+    "avg_clustering": 0.1009,
+    "transitivity": 0.1806,
+    "degree_assortativity": 0.1253,
+    "avg_edge_weight": 0.3705,
+    "giant_avg_path_length": 5.3716,
+    "giant_diameter": 12,
+    "giant_radius": 6
+  },
+  "knn_network": {
+    "nodes": 87,
+    "edges": 156,
+    "density": 0.0417,
+    "avg_degree": 3.586,
+    "max_degree": 5,
+    "min_degree": 1,
+    "median_degree": 4.0,
+    "degree_sd": 1.16,
+    "isolates": 0,
+    "components": 1,
+    "giant_size": 87,
+    "giant_share": 1.0,
+    "avg_clustering": 0.1502,
+    "transitivity": 0.1623,
+    "degree_assortativity": 0.1398,
+    "avg_edge_weight": 0.3216,
+    "giant_avg_path_length": 4.027,
+    "giant_diameter": 8,
+    "giant_radius": 5
+  },
+  "random_baselines": {
+    "samples": 200,
+    "er_avg_clustering": 0.0154,
+    "er_avg_path_length": 5.3002,
+    "config_avg_clustering": 0.0168,
+    "config_avg_path_length": 4.6349
+  },
+  "small_world": {
+    "C_over_Crand": 6.552,
+    "L_over_Lrand": 1.013,
+    "sigma": 6.465
+  },
+  "centrality_top10": [
+    {
+      "respondent": "110",
+      "degree": 7,
+      "strength": 2.695,
+      "betweenness": 0.1499,
+      "closeness": 0.1965,
+      "eigenvector": 0.379
+    },
+    {
+      "respondent": "104",
+      "degree": 6,
+      "strength": 2.2659,
+      "betweenness": 0.111,
+      "closeness": 0.186,
+      "eigenvector": 0.3586
+    },
+    {
+      "respondent": "49",
+      "degree": 6,
+      "strength": 2.2692,
+      "betweenness": 0.0949,
+      "closeness": 0.1852,
+      "eigenvector": 0.3571
+    },
+    {
+      "respondent": "119",
+      "degree": 6,
+      "strength": 2.3921,
+      "betweenness": 0.0895,
+      "closeness": 0.1292,
+      "eigenvector": 0.0221
+    },
+    {
+      "respondent": "95",
+      "degree": 6,
+      "strength": 2.2522,
+      "betweenness": 0.0931,
+      "closeness": 0.1598,
+      "eigenvector": 0.2007
+    },
+    {
+      "respondent": "57",
+      "degree": 5,
+      "strength": 2.0126,
+      "betweenness": 0.0817,
+      "closeness": 0.1869,
+      "eigenvector": 0.2861
+    },
+    {
+      "respondent": "123",
+      "degree": 5,
+      "strength": 1.912,
+      "betweenness": 0.1442,
+      "closeness": 0.1495,
+      "eigenvector": 0.0316
+    },
+    {
+      "respondent": "114",
+      "degree": 5,
+      "strength": 1.7942,
+      "betweenness": 0.0808,
+      "closeness": 0.1655,
+      "eigenvector": 0.1678
+    },
+    {
+      "respondent": "21",
+      "degree": 5,
+      "strength": 1.7692,
+      "betweenness": 0.1321,
+      "closeness": 0.186,
+      "eigenvector": 0.2308
+    },
+    {
+      "respondent": "90",
+      "degree": 5,
+      "strength": 1.71,
+      "betweenness": 0.0476,
+      "closeness": 0.135,
+      "eigenvector": 0.0801
+    }
+  ],
+  "centrality_correlations": {
+    "degree": {
+      "degree": 1.0,
+      "strength": 0.971,
+      "betweenness": 0.887,
+      "closeness": 0.782,
+      "eigenvector": 0.735
+    },
+    "strength": {
+      "degree": 0.971,
+      "strength": 1.0,
+      "betweenness": 0.862,
+      "closeness": 0.753,
+      "eigenvector": 0.705
+    },
+    "betweenness": {
+      "degree": 0.887,
+      "strength": 0.862,
+      "betweenness": 1.0,
+      "closeness": 0.72,
+      "eigenvector": 0.676
+    },
+    "closeness": {
+      "degree": 0.782,
+      "strength": 0.753,
+      "betweenness": 0.72,
+      "closeness": 1.0,
+      "eigenvector": 0.974
+    },
+    "eigenvector": {
+      "degree": 0.735,
+      "strength": 0.705,
+      "betweenness": 0.676,
+      "closeness": 0.974,
+      "eigenvector": 1.0
+    }
+  },
+  "communities": {
+    "runs": 50,
+    "modularity_best": 0.7197,
+    "modularity_mean": 0.7194,
+    "modularity_sd": 0.0002,
+    "n_communities_best": 24,
+    "n_communities_mean": 24.54,
+    "partition_stability_ari": 0.9149,
+    "non_singleton_communities": 11,
+    "communities_with_4plus": 7
+  },
+  "communities_giant": {
+    "runs": 50,
+    "modularity_best": 0.6771,
+    "modularity_mean": 0.6768,
+    "modularity_sd": 0.0005,
+    "n_communities_best": 7,
+    "n_communities_mean": 6.92,
+    "partition_stability_ari": 0.9438
+  },
+  "communities_knn": {
+    "runs": 50,
+    "modularity_best": 0.6195,
+    "modularity_mean": 0.6137,
+    "modularity_sd": 0.0027,
+    "n_communities_best": 10,
+    "n_communities_mean": 9.16,
+    "partition_stability_ari": 0.7197,
+    "ari_vs_main": 0.4201
+  },
+  "community_profiles": [
+    {
+      "community": 0,
+      "size": 14,
+      "members": [
+        "11",
+        "12",
+        "42",
+        "46",
+        "65",
+        "91",
+        "93",
+        "101",
+        "111",
+        "113",
+        "119",
+        "123",
+        "125",
+        "126"
+      ],
+      "mean_raw_score": 0.853,
+      "z_T": -0.098,
+      "z_E": -0.298,
+      "z_S": -0.467,
+      "z_V": -0.748,
+      "most_negative_items": [
+        [
+          "V05",
+          -1.19
+        ],
+        [
+          "E11",
+          -1.1
+        ],
+        [
+          "V07",
+          -1.07
+        ],
+        [
+          "V15",
+          -1.05
+        ]
+      ],
+      "most_positive_items": [
+        [
+          "E03",
+          0.52
+        ],
+        [
+          "T01",
+          0.38
+        ],
+        [
+          "T08",
+          0.33
+        ],
+        [
+          "E13",
+          0.32
+        ]
+      ]
+    },
+    {
+      "community": 1,
+      "size": 13,
+      "members": [
+        "16",
+        "22",
+        "31",
+        "32",
+        "35",
+        "48",
+        "50",
+        "54",
+        "83",
+        "90",
+        "95",
+        "114",
+        "117"
+      ],
+      "mean_raw_score": 1.198,
+      "z_T": 0.146,
+      "z_E": 0.062,
+      "z_S": 0.006,
+      "z_V": 0.108,
+      "most_negative_items": [
+        [
+          "E04",
+          -0.77
+        ],
+        [
+          "S04",
+          -0.46
+        ],
+        [
+          "T11",
+          -0.45
+        ],
+        [
+          "E06",
+          -0.43
+        ]
+      ],
+      "most_positive_items": [
+        [
+          "T04",
+          0.66
+        ],
+        [
+          "E09",
+          0.57
+        ],
+        [
+          "E10",
+          0.57
+        ],
+        [
+          "T13",
+          0.5
+        ]
+      ]
+    },
+    {
+      "community": 2,
+      "size": 12,
+      "members": [
+        "13",
+        "18",
+        "21",
+        "38",
+        "53",
+        "57",
+        "72",
+        "74",
+        "81",
+        "94",
+        "105",
+        "110"
+      ],
+      "mean_raw_score": 1.39,
+      "z_T": 0.011,
+      "z_E": 0.338,
+      "z_S": 0.463,
+      "z_V": 0.446,
+      "most_negative_items": [
+        [
+          "T01",
+          -0.55
+        ],
+        [
+          "E02",
+          -0.53
+        ],
+        [
+          "E03",
+          -0.42
+        ],
+        [
+          "T08",
+          -0.37
+        ]
+      ],
+      "most_positive_items": [
+        [
+          "E06",
+          0.9
+        ],
+        [
+          "E09",
+          0.85
+        ],
+        [
+          "V12",
+          0.78
+        ],
+        [
+          "V08",
+          0.74
+        ]
+      ]
+    },
+    {
+      "community": 3,
+      "size": 10,
+      "members": [
+        "41",
+        "49",
+        "52",
+        "61",
+        "62",
+        "66",
+        "86",
+        "97",
+        "103",
+        "104"
+      ],
+      "mean_raw_score": 1.374,
+      "z_T": 0.294,
+      "z_E": 0.104,
+      "z_S": 0.43,
+      "z_V": 0.375,
+      "most_negative_items": [
+        [
+          "E03",
+          -0.68
+        ],
+        [
+          "V11",
+          -0.46
+        ],
+        [
+          "E02",
+          -0.39
+        ],
+        [
+          "E06",
+          -0.39
+        ]
+      ],
+      "most_positive_items": [
+        [
+          "V10",
+          0.77
+        ],
+        [
+          "T12",
+          0.74
+        ],
+        [
+          "T10",
+          0.7
+        ],
+        [
+          "V08",
+          0.69
+        ]
+      ]
+    },
+    {
+      "community": 4,
+      "size": 7,
+      "members": [
+        "17",
+        "56",
+        "58",
+        "79",
+        "80",
+        "82",
+        "102"
+      ],
+      "mean_raw_score": 1.021,
+      "z_T": 0.067,
+      "z_E": -0.325,
+      "z_S": -0.175,
+      "z_V": -0.202,
+      "most_negative_items": [
+        [
+          "E01",
+          -1.62
+        ],
+        [
+          "V14",
+          -1.12
+        ],
+        [
+          "E09",
+          -1.04
+        ],
+        [
+          "E07",
+          -0.79
+        ]
+      ],
+      "most_positive_items": [
+        [
+          "S10",
+          0.64
+        ],
+        [
+          "T11",
+          0.63
+        ],
+        [
+          "E03",
+          0.59
+        ],
+        [
+          "E02",
+          0.53
+        ]
+      ]
+    },
+    {
+      "community": 5,
+      "size": 5,
+      "members": [
+        "40",
+        "55",
+        "85",
+        "92",
+        "108"
+      ],
+      "mean_raw_score": 1.288,
+      "z_T": -0.114,
+      "z_E": 0.017,
+      "z_S": 0.374,
+      "z_V": 0.473,
+      "most_negative_items": [
+        [
+          "T10",
+          -1.58
+        ],
+        [
+          "E11",
+          -1.3
+        ],
+        [
+          "E13",
+          -0.79
+        ],
+        [
+          "V08",
+          -0.67
+        ]
+      ],
+      "most_positive_items": [
+        [
+          "E03",
+          1.2
+        ],
+        [
+          "T15",
+          1.06
+        ],
+        [
+          "V11",
+          0.98
+        ],
+        [
+          "S09",
+          0.9
+        ]
+      ]
+    },
+    {
+      "community": 6,
+      "size": 4,
+      "members": [
+        "45",
+        "63",
+        "118",
+        "120"
+      ],
+      "mean_raw_score": 0.782,
+      "z_T": -0.596,
+      "z_E": -0.097,
+      "z_S": -0.393,
+      "z_V": -0.677,
+      "most_negative_items": [
+        [
+          "T14",
+          -2.26
+        ],
+        [
+          "V10",
+          -1.78
+        ],
+        [
+          "S06",
+          -1.72
+        ],
+        [
+          "T04",
+          -1.72
+        ]
+      ],
+      "most_positive_items": [
+        [
+          "E03",
+          0.84
+        ],
+        [
+          "V06",
+          0.83
+        ],
+        [
+          "S11",
+          0.74
+        ],
+        [
+          "E11",
+          0.6
+        ]
+      ]
+    },
+    {
+      "community": 7,
+      "size": 3,
+      "members": [
+        "19",
+        "24",
+        "121"
+      ],
+      "mean_raw_score": 0.981,
+      "z_T": -0.228,
+      "z_E": 0.017,
+      "z_S": -0.313,
+      "z_V": -0.109
+    },
+    {
+      "community": 8,
+      "size": 2,
+      "members": [
+        "14",
+        "99"
+      ],
+      "mean_raw_score": 1.0,
+      "z_T": -0.143,
+      "z_E": -0.179,
+      "z_S": -0.176,
+      "z_V": -0.254
+    },
+    {
+      "community": 9,
+      "size": 2,
+      "members": [
+        "26",
+        "116"
+      ],
+      "mean_raw_score": 1.308,
+      "z_T": 0.537,
+      "z_E": 0.251,
+      "z_S": 0.093,
+      "z_V": -0.126
+    },
+    {
+      "community": 10,
+      "size": 2,
+      "members": [
+        "70",
+        "106"
+      ],
+      "mean_raw_score": 1.058,
+      "z_T": -0.351,
+      "z_E": 0.101,
+      "z_S": 0.143,
+      "z_V": -0.315
+    },
+    {
+      "community": 11,
+      "size": 1,
+      "members": [
+        "20"
+      ],
+      "mean_raw_score": 1.333,
+      "z_T": -0.051,
+      "z_E": 0.066,
+      "z_S": 0.336,
+      "z_V": 0.639
+    },
+    {
+      "community": 12,
+      "size": 1,
+      "members": [
+        "29"
+      ],
+      "mean_raw_score": 1.467,
+      "z_T": 0.215,
+      "z_E": 0.048,
+      "z_S": 0.565,
+      "z_V": 0.837
+    },
+    {
+      "community": 13,
+      "size": 1,
+      "members": [
+        "36"
+      ],
+      "mean_raw_score": 0.9,
+      "z_T": 0.343,
+      "z_E": -0.529,
+      "z_S": -0.589,
+      "z_V": -0.23
+    },
+    {
+      "community": 14,
+      "size": 1,
+      "members": [
+        "37"
+      ],
+      "mean_raw_score": 1.55,
+      "z_T": 0.58,
+      "z_E": 0.38,
+      "z_S": 0.489,
+      "z_V": 0.654
+    },
+    {
+      "community": 15,
+      "size": 1,
+      "members": [
+        "43"
+      ],
+      "mean_raw_score": 1.15,
+      "z_T": -0.007,
+      "z_E": -0.377,
+      "z_S": -0.054,
+      "z_V": 0.552
+    },
+    {
+      "community": 16,
+      "size": 1,
+      "members": [
+        "59"
+      ],
+      "mean_raw_score": 1.117,
+      "z_T": -0.08,
+      "z_E": 0.301,
+      "z_S": -0.347,
+      "z_V": 0.049
+    },
+    {
+      "community": 17,
+      "size": 1,
+      "members": [
+        "64"
+      ],
+      "mean_raw_score": 1.083,
+      "z_T": 0.105,
+      "z_E": 0.079,
+      "z_S": -0.544,
+      "z_V": 0.015
+    },
+    {
+      "community": 18,
+      "size": 1,
+      "members": [
+        "67"
+      ],
+      "mean_raw_score": 1.467,
+      "z_T": 0.135,
+      "z_E": 0.5,
+      "z_S": 0.604,
+      "z_V": 0.412
+    },
+    {
+      "community": 19,
+      "size": 1,
+      "members": [
+        "69"
+      ],
+      "mean_raw_score": 1.102,
+      "z_T": -0.242,
+      "z_E": 0.169,
+      "z_S": -0.317,
+      "z_V": 0.053
+    },
+    {
+      "community": 20,
+      "size": 1,
+      "members": [
+        "84"
+      ],
+      "mean_raw_score": 1.034,
+      "z_T": -0.468,
+      "z_E": -0.003,
+      "z_S": -0.662,
+      "z_V": 0.837
+    },
+    {
+      "community": 21,
+      "size": 1,
+      "members": [
+        "89"
+      ],
+      "mean_raw_score": 0.817,
+      "z_T": -0.541,
+      "z_E": -0.221,
+      "z_S": -0.911,
+      "z_V": 0.114
+    },
+    {
+      "community": 22,
+      "size": 1,
+      "members": [
+        "109"
+      ],
+      "mean_raw_score": 1.05,
+      "z_T": -0.199,
+      "z_E": 0.186,
+      "z_S": 0.051,
+      "z_V": -0.83
+    },
+    {
+      "community": 23,
+      "size": 1,
+      "members": [
+        "115"
+      ],
+      "mean_raw_score": 0.85,
+      "z_T": -0.43,
+      "z_E": -0.011,
+      "z_S": -0.589,
+      "z_V": -0.472
+    }
+  ],
+  "homophily": {
+    "within_mean": 0.1081,
+    "between_mean": -0.029,
+    "gap": 0.1371,
+    "n_within": 317,
+    "n_between": 1763,
+    "cohens_d": 0.782
+  },
+  "items_most_divisive": [
+    {
+      "index": "E04",
+      "mean": 0.437,
+      "sd": 1.162,
+      "share_agree": 0.54,
+      "share_disagree": 0.276,
+      "domain": "Education",
+      "question": "High-quality online learning can effectively complement classroom teaching."
+    },
+    {
+      "index": "E03",
+      "mean": -0.943,
+      "sd": 1.118,
+      "share_agree": 0.126,
+      "share_disagree": 0.701,
+      "domain": "Education",
+      "question": "Class attendance should be compulsory for all courses."
+    },
+    {
+      "index": "E02",
+      "mean": -0.161,
+      "sd": 1.113,
+      "share_agree": 0.322,
+      "share_disagree": 0.425,
+      "domain": "Education",
+      "question": "Traditional written examinations accurately measure a student's knowledge."
+    },
+    {
+      "index": "T08",
+      "mean": 0.07,
+      "sd": 1.097,
+      "share_agree": 0.368,
+      "share_disagree": 0.276,
+      "domain": "Technology",
+      "question": "AI-assisted diagnosis should become routine in healthcare."
+    },
+    {
+      "index": "S02",
+      "mean": 0.839,
+      "sd": 1.049,
+      "share_agree": 0.724,
+      "share_disagree": 0.115,
+      "domain": "Ethics & Society",
+      "question": "Universities should encourage students to participate in community service activities."
+    },
+    {
+      "index": "T07",
+      "mean": 1.207,
+      "sd": 1.041,
+      "share_agree": 0.828,
+      "share_disagree": 0.092,
+      "domain": "Technology",
+      "question": "Robots should replace humans in hazardous occupations whenever possible."
+    },
+    {
+      "index": "E09",
+      "mean": 0.791,
+      "sd": 1.036,
+      "share_agree": 0.609,
+      "share_disagree": 0.103,
+      "domain": "Education",
+      "question": "Collaborative learning is generally more effective than individual learning."
+    },
+    {
+      "index": "E12",
+      "mean": 0.931,
+      "sd": 1.026,
+      "share_agree": 0.736,
+      "share_disagree": 0.115,
+      "domain": "Education",
+      "question": "Artificial intelligence should be integrated into teaching and personalized learning."
+    }
+  ],
+  "items_most_consensual": [
+    {
+      "index": "E15",
+      "mean": 1.713,
+      "sd": 0.501,
+      "share_agree": 0.977,
+      "domain": "Education",
+      "question": "Continuous learning and skill development are essential throughout one's career."
+    },
+    {
+      "index": "V13",
+      "mean": 1.671,
+      "sd": 0.561,
+      "share_agree": 0.954,
+      "domain": "Environment",
+      "question": "Companies should be held accountable for the environmental impacts of their activities."
+    },
+    {
+      "index": "S05",
+      "mean": 1.632,
+      "sd": 0.589,
+      "share_agree": 0.943,
+      "domain": "Ethics & Society",
+      "question": "Individuals should have greater control over how their personal data are collected and used."
+    },
+    {
+      "index": "E11",
+      "mean": 1.621,
+      "sd": 0.63,
+      "share_agree": 0.943,
+      "domain": "Education",
+      "question": "University curricula should be updated more frequently to match emerging technologies."
+    },
+    {
+      "index": "V09",
+      "mean": 1.6,
+      "sd": 0.706,
+      "share_agree": 0.92,
+      "domain": "Environment",
+      "question": "Products should be designed to encourage reuse, repair, and recycling."
+    },
+    {
+      "index": "V14",
+      "mean": 1.553,
+      "sd": 0.642,
+      "share_agree": 0.92,
+      "domain": "Environment",
+      "question": "International cooperation is necessary to effectively address environmental challenges."
+    }
+  ],
+  "domain_means": {
+    "T": 0.995,
+    "E": 0.909,
+    "S": 1.283,
+    "V": 1.385
+  },
+  "domain_sds": {
+    "T": 0.916,
+    "E": 0.881,
+    "S": 0.799,
+    "V": 0.719
+  },
+  "latent_axes": {
+    "explained_variance_top5": [
+      0.1984,
+      0.055,
+      0.0497,
+      0.0458,
+      0.0449
+    ],
+    "cumulative_top5": 0.3939
+  },
+  "PC1_poles": {
+    "negative": [
+      [
+        "E03",
+        -0.091
+      ],
+      [
+        "E02",
+        -0.043
+      ],
+      [
+        "T01",
+        -0.018
+      ],
+      [
+        "T08",
+        0.032
+      ],
+      [
+        "T09",
+        0.032
+      ]
+    ],
+    "positive": [
+      [
+        "S09",
+        0.197
+      ],
+      [
+        "V09",
+        0.188
+      ],
+      [
+        "V10",
+        0.188
+      ],
+      [
+        "S14",
+        0.188
+      ],
+      [
+        "E10",
+        0.186
+      ]
+    ]
+  },
+  "PC2_poles": {
+    "negative": [
+      [
+        "E01",
+        -0.27
+      ],
+      [
+        "V07",
+        -0.25
+      ],
+      [
+        "E05",
+        -0.23
+      ],
+      [
+        "V05",
+        -0.211
+      ],
+      [
+        "T09",
+        -0.211
+      ]
+    ],
+    "positive": [
+      [
+        "T12",
+        0.323
+      ],
+      [
+        "T14",
+        0.265
+      ],
+      [
+        "T04",
+        0.188
+      ],
+      [
+        "T10",
+        0.185
+      ],
+      [
+        "T15",
+        0.183
+      ]
+    ]
+  },
+  "pc_vs_centrality_spearman": {
+    "PC1": {
+      "degree": 0.193,
+      "strength": 0.199,
+      "betweenness": 0.26,
+      "eigenvector": 0.466
+    },
+    "PC2": {
+      "degree": 0.048,
+      "strength": 0.055,
+      "betweenness": -0.007,
+      "eigenvector": 0.092
+    }
+  },
+  "community_pc_means": {
+    "0": {
+      "PC1": -3.704,
+      "PC2": 0.913,
+      "PC3": 0.43
+    },
+    "1": {
+      "PC1": 0.825,
+      "PC2": 0.035,
+      "PC3": 0.308
+    },
+    "2": {
+      "PC1": 2.859,
+      "PC2": -0.835,
+      "PC3": -0.239
+    },
+    "3": {
+      "PC1": 2.772,
+      "PC2": 0.407,
+      "PC3": -0.485
+    },
+    "4": {
+      "PC1": -1.349,
+      "PC2": 1.205,
+      "PC3": -1.087
+    },
+    "5": {
+      "PC1": 1.42,
+      "PC2": -0.06,
+      "PC3": -0.061
+    },
+    "6": {
+      "PC1": -4.0,
+      "PC2": -2.547,
+      "PC3": -2.157
+    }
+  },
+  "community_separation_F": {
+    "PC1": [
+      9.744,
+      6,
+      58
+    ],
+    "PC2": [
+      4.153,
+      6,
+      58
+    ],
+    "PC3": [
+      1.808,
+      6,
+      58
+    ]
+  },
+  "issue_network": {
+    "nodes": 60,
+    "edges": 176,
+    "density": 0.0994,
+    "avg_degree": 5.867,
+    "max_degree": 19,
+    "min_degree": 0,
+    "median_degree": 5.0,
+    "degree_sd": 5.377,
+    "isolates": 12,
+    "components": 13,
+    "giant_size": 48,
+    "giant_share": 0.8,
+    "avg_clustering": 0.2952,
+    "transitivity": 0.4055,
+    "degree_assortativity": 0.1821,
+    "avg_edge_weight": 0.4272,
+    "giant_avg_path_length": 2.5479,
+    "giant_diameter": 7,
+    "giant_radius": 4
+  },
+  "issue_communities": {
+    "runs": 50,
+    "modularity_best": 0.2981,
+    "modularity_mean": 0.2908,
+    "modularity_sd": 0.007,
+    "n_communities_best": 5,
+    "n_communities_mean": 5.82,
+    "partition_stability_ari": 0.7253,
+    "nodes_clustered": 48,
+    "isolated_items": 12,
+    "ari_vs_survey_domains": 0.1157,
+    "sizes": [
+      14,
+      14,
+      13,
+      4,
+      3
+    ]
+  },
+  "issue_domain_crosstab": {
+    "0": {
+      "E": 2,
+      "S": 4,
+      "T": 1,
+      "V": 7
+    },
+    "1": {
+      "E": 4,
+      "S": 1,
+      "T": 5,
+      "V": 4
+    },
+    "2": {
+      "E": 0,
+      "S": 8,
+      "T": 1,
+      "V": 4
+    },
+    "3": {
+      "E": 0,
+      "S": 1,
+      "T": 3,
+      "V": 0
+    },
+    "4": {
+      "E": 3,
+      "S": 0,
+      "T": 0,
+      "V": 0
+    }
+  }
+}

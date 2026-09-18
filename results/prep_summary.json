@@ -1,0 +1,46 @@
+{
+  "raw_respondents": 96,
+  "items": 60,
+  "raw_response_vocabulary": {
+    "Strongly Agree": 2251,
+    "Agree": 1914,
+    "Neutral": 686,
+    "": 505,
+    "Disagree": 256,
+    "Strongly Disagree": 111,
+    "No Comments": 37
+  },
+  "no_comments_cells": 37,
+  "blank_cells": 505,
+  "min_completeness": 0.5,
+  "dropped_respondents": {
+    "44": 0.0,
+    "60": 0.0,
+    "68": 0.0,
+    "73": 0.0,
+    "78": 0.0,
+    "30": 0.25,
+    "39": 0.25,
+    "77": 0.25,
+    "87": 0.25
+  },
+  "n_dropped": 9,
+  "n_nodes": 87,
+  "missing_cells_after_filter": 62,
+  "missing_rate_after_filter": 0.0119,
+  "fully_complete_respondents": 68,
+  "items_per_domain": {
+    "T": 15,
+    "E": 15,
+    "S": 15,
+    "V": 15
+  },
+  "response_share_after_filter": {
+    "Strongly Disagree": 0.0215,
+    "Disagree": 0.0491,
+    "Neutral": 0.1293,
+    "Agree": 0.3662,
+    "Strongly Agree": 0.4339
+  },
+  "grand_mean": 1.1419
+}

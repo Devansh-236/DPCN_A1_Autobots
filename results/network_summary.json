@@ -1,0 +1,264 @@
+{
+  "n_nodes": 87,
+  "possible_pairs": 3741,
+  "similarity_raw": {
+    "mean": 0.2641,
+    "sd": 0.1856,
+    "min": -0.3588,
+    "max": 0.7739,
+    "share_positive": 0.9123
+  },
+  "similarity_standardised": {
+    "mean": -0.0107,
+    "sd": 0.1552,
+    "min": -0.5134,
+    "max": 0.7369,
+    "share_positive": 0.4584
+  },
+  "null_model": {
+    "type": "independent within-item permutation",
+    "permutations": 60,
+    "null_pairs": 224460,
+    "null_mean": -0.0116,
+    "null_sd": 0.1299,
+    "percentile": 99.0,
+    "threshold_tau": 0.2991,
+    "observed_above_tau": 88,
+    "expected_above_tau_by_chance": 37.4
+  },
+  "main_network": {
+    "edges": 88,
+    "density": 0.0235
+  },
+  "knn_network": {
+    "k": 5,
+    "edges": 156
+  },
+  "issue_network": {
+    "nodes": 60,
+    "threshold": 0.3583,
+    "edges": 176
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.05,
+      "edges": 1298,
+      "density": 0.347,
+      "isolates": 0,
+      "components": 1,
+      "giant_share": 1.0,
+      "avg_clustering": 0.4366,
+      "avg_clustering_random": 0.3467,
+      "clustering_excess": 1.26
+    },
+    {
+      "threshold": 0.075,
+      "edges": 1088,
+      "density": 0.2908,
+      "isolates": 0,
+      "components": 1,
+      "giant_share": 1.0,
+      "avg_clustering": 0.3922,
+      "avg_clustering_random": 0.291,
+      "clustering_excess": 1.35
+    },
+    {
+      "threshold": 0.1,
+      "edges": 910,
+      "density": 0.2433,
+      "isolates": 0,
+      "components": 1,
+      "giant_share": 1.0,
+      "avg_clustering": 0.3595,
+      "avg_clustering_random": 0.2425,
+      "clustering_excess": 1.48
+    },
+    {
+      "threshold": 0.125,
+      "edges": 730,
+      "density": 0.1951,
+      "isolates": 0,
+      "components": 1,
+      "giant_share": 1.0,
+      "avg_clustering": 0.3118,
+      "avg_clustering_random": 0.1951,
+      "clustering_excess": 1.6
+    },
+    {
+      "threshold": 0.15,
+      "edges": 564,
+      "density": 0.1508,
+      "isolates": 0,
+      "components": 1,
+      "giant_share": 1.0,
+      "avg_clustering": 0.2721,
+      "avg_clustering_random": 0.1504,
+      "clustering_excess": 1.81
+    },
+    {
+      "threshold": 0.175,
+      "edges": 445,
+      "density": 0.119,
+      "isolates": 0,
+      "components": 1,
+      "giant_share": 1.0,
+      "avg_clustering": 0.2457,
+      "avg_clustering_random": 0.1183,
+      "clustering_excess": 2.08
+    },
+    {
+      "threshold": 0.2,
+      "edges": 339,
+      "density": 0.0906,
+      "isolates": 0,
+      "components": 1,
+      "giant_share": 1.0,
+      "avg_clustering": 0.2192,
+      "avg_clustering_random": 0.0905,
+      "clustering_excess": 2.42
+    },
+    {
+      "threshold": 0.225,
+      "edges": 246,
+      "density": 0.0658,
+      "isolates": 0,
+      "components": 1,
+      "giant_share": 1.0,
+      "avg_clustering": 0.2204,
+      "avg_clustering_random": 0.0641,
+      "clustering_excess": 3.44
+    },
+    {
+      "threshold": 0.25,
+      "edges": 184,
+      "density": 0.0492,
+      "isolates": 0,
+      "components": 1,
+      "giant_share": 1.0,
+      "avg_clustering": 0.2203,
+      "avg_clustering_random": 0.0436,
+      "clustering_excess": 5.05
+    },
+    {
+      "threshold": 0.275,
+      "edges": 132,
+      "density": 0.0353,
+      "isolates": 8,
+      "components": 11,
+      "giant_share": 0.839,
+      "avg_clustering": 0.1722,
+      "avg_clustering_random": 0.0272,
+      "clustering_excess": 6.33
+    },
+    {
+      "threshold": 0.3,
+      "edges": 87,
+      "density": 0.0233,
+      "isolates": 13,
+      "components": 19,
+      "giant_share": 0.701,
+      "avg_clustering": 0.1055,
+      "avg_clustering_random": 0.0137,
+      "clustering_excess": 7.68
+    },
+    {
+      "threshold": 0.325,
+      "edges": 65,
+      "density": 0.0174,
+      "isolates": 23,
+      "components": 32,
+      "giant_share": 0.391,
+      "avg_clustering": 0.0797,
+      "avg_clustering_random": 0.0057,
+      "clustering_excess": 14.03
+    },
+    {
+      "threshold": 0.35,
+      "edges": 48,
+      "density": 0.0128,
+      "isolates": 33,
+      "components": 44,
+      "giant_share": 0.264,
+      "avg_clustering": 0.0402,
+      "avg_clustering_random": 0.0046,
+      "clustering_excess": 8.82
+    },
+    {
+      "threshold": 0.375,
+      "edges": 36,
+      "density": 0.0096,
+      "isolates": 45,
+      "components": 55,
+      "giant_share": 0.195,
+      "avg_clustering": 0.0345,
+      "avg_clustering_random": 0.0007,
+      "clustering_excess": 51.43
+    },
+    {
+      "threshold": 0.4,
+      "edges": 24,
+      "density": 0.0064,
+      "isolates": 54,
+      "components": 64,
+      "giant_share": 0.115,
+      "avg_clustering": 0.0192,
+      "avg_clustering_random": 0.0018,
+      "clustering_excess": 10.36
+    },
+    {
+      "threshold": 0.425,
+      "edges": 14,
+      "density": 0.0037,
+      "isolates": 61,
+      "components": 73,
+      "giant_share": 0.034,
+      "avg_clustering": 0.0,
+      "avg_clustering_random": 0.0,
+      "clustering_excess": null
+    },
+    {
+      "threshold": 0.45,
+      "edges": 5,
+      "density": 0.0013,
+      "isolates": 77,
+      "components": 82,
+      "giant_share": 0.023,
+      "avg_clustering": 0.0,
+      "avg_clustering_random": 0.0,
+      "clustering_excess": null
+    },
+    {
+      "threshold": 0.475,
+      "edges": 4,
+      "density": 0.0011,
+      "isolates": 79,
+      "components": 83,
+      "giant_share": 0.023,
+      "avg_clustering": 0.0,
+      "avg_clustering_random": 0.0,
+      "clustering_excess": null
+    },
+    {
+      "threshold": 0.5,
+      "edges": 1,
+      "density": 0.0003,
+      "isolates": 85,
+      "components": 86,
+      "giant_share": 0.023,
+      "avg_clustering": 0.0,
+      "avg_clustering_random": 0.0,
+      "clustering_excess": null
+    },
+    {
+      "threshold": 0.525,
+      "edges": 1,
+      "density": 0.0003,
+      "isolates": 85,
+      "components": 86,
+      "giant_share": 0.023,
+      "avg_clustering": 0.0,
+      "avg_clustering_random": 0.0,
+      "clustering_excess": null
+    }
+  ]
+}

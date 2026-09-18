@@ -152,11 +152,13 @@ def main():
     # ---- communities ------------------------------------------------------ #
     best, cstats = consensus_communities(G)
     res["communities"] = cstats
-    comm = {}
-    for i, cset in enumerate(sorted(best, key=len, reverse=True)):
-        for v in cset:
-            comm[v] = i
-    pd.Series(comm, name="community").rename_axis("respondent").to_csv(
+    def order_partition(part):
+        """Size descending, then smallest member id - so labels never depend on set
+        iteration order, which varies between Python processes."""
+        return sorted(part, key=lambda c: (-len(c), sorted(c)[0]))
+
+    comm = {v: i for i, cset in enumerate(order_partition(best)) for v in cset}
+    pd.Series(comm, name="community").rename_axis("respondent").sort_index().to_csv(
         RESULTS / "communities.csv")
 
     # the same partition restricted to the giant component - modularity on the full
@@ -168,7 +170,7 @@ def main():
 
     bestk, ckstats = consensus_communities(Gk)
     res["communities_knn"] = ckstats
-    commk = {v: i for i, cs in enumerate(sorted(bestk, key=len, reverse=True)) for v in cs}
+    commk = {v: i for i, cs in enumerate(order_partition(bestk)) for v in cs}
     from sklearn_free_ari import adjusted_rand
     shared = [v for v in nodes if deg[v] > 0]
     res["communities_knn"]["ari_vs_main"] = round(
@@ -294,9 +296,9 @@ def main():
     istats["nodes_clustered"] = GIg.number_of_nodes()
     istats["isolated_items"] = int(sum(1 for _, d in GI.degree() if d == 0))
     res["issue_communities"] = istats
-    ilab = {v: i for i, cs in enumerate(sorted(ipart, key=len, reverse=True)) for v in cs}
+    ilab = {v: i for i, cs in enumerate(order_partition(ipart)) for v in cs}
     items_in = [i for i in items if i in ilab]
-    pd.Series(ilab, name="issue_community").rename_axis("item").to_csv(
+    pd.Series(ilab, name="issue_community").rename_axis("item").sort_index().to_csv(
         RESULTS / "issue_communities.csv")
     dom = {r.item: r.domain_code for r in meta.itertuples()}
     res["issue_communities"]["ari_vs_survey_domains"] = round(

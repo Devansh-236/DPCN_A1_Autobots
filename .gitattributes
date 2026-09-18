@@ -1,0 +1,2 @@
+# keep the raw survey export byte-for-byte as exported
+data/*.csv -text

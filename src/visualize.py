@@ -186,7 +186,10 @@ def fig_network():
     """Spring layout on the giant component; the fragments and isolates are parked in a
     labelled strip below it, because a force layout on a disconnected graph just scatters
     them at random and wastes the canvas."""
-    comps = sorted(nx.connected_components(G), key=len, reverse=True)
+    # Sets of node ids iterate in an order that varies between Python processes, so every
+    # ordering below carries an explicit tiebreak - otherwise the layout is not reproducible.
+    comps = sorted((sorted(c, key=int) for c in nx.connected_components(G)),
+                   key=lambda c: (-len(c), int(c[0])))
     giant = G.subgraph(comps[0]).copy()
     pos = nx.spring_layout(giant, weight="weight", seed=RANDOM_SEED, k=0.42, iterations=600)
     P = np.array(list(pos.values()))
@@ -198,8 +201,8 @@ def fig_network():
 
     strip_nodes = []
     for comp in comps[1:]:
-        strip_nodes.append(sorted(comp, key=lambda v: -G.degree(v)))
-    strip_nodes.sort(key=len, reverse=True)
+        strip_nodes.append(sorted(comp, key=lambda v: (-G.degree(v), int(v))))
+    strip_nodes.sort(key=lambda g: (-len(g), int(g[0])))
     x = 0.01
     for grp in strip_nodes:                         # pairs/triples kept adjacent, then isolates
         for k, v in enumerate(grp):
@@ -218,7 +221,7 @@ def fig_network():
         ax.scatter(*pos[v], s=24 + 32 * deg[v], color=cc(v), zorder=3,
                    edgecolors=SURFACE, linewidths=1.5)
     for c in BIG:
-        members = [v for v in comps[0] if comm.get(v) == c]
+        members = [v for v in comps[0] if comm.get(v) == c]   # comps[0] is already sorted
         if len(members) < 2:
             continue
         cx = np.mean([pos[v][0] for v in members]); cy = np.mean([pos[v][1] for v in members])

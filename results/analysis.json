@@ -615,14 +615,14 @@
       "community": 8,
       "size": 2,
       "members": [
-        "14",
-        "99"
+        "70",
+        "106"
       ],
-      "mean_raw_score": 1.0,
-      "z_T": -0.143,
-      "z_E": -0.179,
-      "z_S": -0.176,
-      "z_V": -0.254
+      "mean_raw_score": 1.058,
+      "z_T": -0.351,
+      "z_E": 0.101,
+      "z_S": 0.143,
+      "z_V": -0.315
     },
     {
       "community": 9,
@@ -641,149 +641,17 @@
       "community": 10,
       "size": 2,
       "members": [
-        "70",
-        "106"
+        "14",
+        "99"
       ],
-      "mean_raw_score": 1.058,
-      "z_T": -0.351,
-      "z_E": 0.101,
-      "z_S": 0.143,
-      "z_V": -0.315
+      "mean_raw_score": 1.0,
+      "z_T": -0.143,
+      "z_E": -0.179,
+      "z_S": -0.176,
+      "z_V": -0.254
     },
     {
       "community": 11,
-      "size": 1,
-      "members": [
-        "20"
-      ],
-      "mean_raw_score": 1.333,
-      "z_T": -0.051,
-      "z_E": 0.066,
-      "z_S": 0.336,
-      "z_V": 0.639
-    },
-    {
-      "community": 12,
-      "size": 1,
-      "members": [
-        "29"
-      ],
-      "mean_raw_score": 1.467,
-      "z_T": 0.215,
-      "z_E": 0.048,
-      "z_S": 0.565,
-      "z_V": 0.837
-    },
-    {
-      "community": 13,
-      "size": 1,
-      "members": [
-        "36"
-      ],
-      "mean_raw_score": 0.9,
-      "z_T": 0.343,
-      "z_E": -0.529,
-      "z_S": -0.589,
-      "z_V": -0.23
-    },
-    {
-      "community": 14,
-      "size": 1,
-      "members": [
-        "37"
-      ],
-      "mean_raw_score": 1.55,
-      "z_T": 0.58,
-      "z_E": 0.38,
-      "z_S": 0.489,
-      "z_V": 0.654
-    },
-    {
-      "community": 15,
-      "size": 1,
-      "members": [
-        "43"
-      ],
-      "mean_raw_score": 1.15,
-      "z_T": -0.007,
-      "z_E": -0.377,
-      "z_S": -0.054,
-      "z_V": 0.552
-    },
-    {
-      "community": 16,
-      "size": 1,
-      "members": [
-        "59"
-      ],
-      "mean_raw_score": 1.117,
-      "z_T": -0.08,
-      "z_E": 0.301,
-      "z_S": -0.347,
-      "z_V": 0.049
-    },
-    {
-      "community": 17,
-      "size": 1,
-      "members": [
-        "64"
-      ],
-      "mean_raw_score": 1.083,
-      "z_T": 0.105,
-      "z_E": 0.079,
-      "z_S": -0.544,
-      "z_V": 0.015
-    },
-    {
-      "community": 18,
-      "size": 1,
-      "members": [
-        "67"
-      ],
-      "mean_raw_score": 1.467,
-      "z_T": 0.135,
-      "z_E": 0.5,
-      "z_S": 0.604,
-      "z_V": 0.412
-    },
-    {
-      "community": 19,
-      "size": 1,
-      "members": [
-        "69"
-      ],
-      "mean_raw_score": 1.102,
-      "z_T": -0.242,
-      "z_E": 0.169,
-      "z_S": -0.317,
-      "z_V": 0.053
-    },
-    {
-      "community": 20,
-      "size": 1,
-      "members": [
-        "84"
-      ],
-      "mean_raw_score": 1.034,
-      "z_T": -0.468,
-      "z_E": -0.003,
-      "z_S": -0.662,
-      "z_V": 0.837
-    },
-    {
-      "community": 21,
-      "size": 1,
-      "members": [
-        "89"
-      ],
-      "mean_raw_score": 0.817,
-      "z_T": -0.541,
-      "z_E": -0.221,
-      "z_S": -0.911,
-      "z_V": 0.114
-    },
-    {
-      "community": 22,
       "size": 1,
       "members": [
         "109"
@@ -795,7 +663,7 @@
       "z_V": -0.83
     },
     {
-      "community": 23,
+      "community": 12,
       "size": 1,
       "members": [
         "115"
@@ -805,6 +673,138 @@
       "z_E": -0.011,
       "z_S": -0.589,
       "z_V": -0.472
+    },
+    {
+      "community": 13,
+      "size": 1,
+      "members": [
+        "20"
+      ],
+      "mean_raw_score": 1.333,
+      "z_T": -0.051,
+      "z_E": 0.066,
+      "z_S": 0.336,
+      "z_V": 0.639
+    },
+    {
+      "community": 14,
+      "size": 1,
+      "members": [
+        "29"
+      ],
+      "mean_raw_score": 1.467,
+      "z_T": 0.215,
+      "z_E": 0.048,
+      "z_S": 0.565,
+      "z_V": 0.837
+    },
+    {
+      "community": 15,
+      "size": 1,
+      "members": [
+        "36"
+      ],
+      "mean_raw_score": 0.9,
+      "z_T": 0.343,
+      "z_E": -0.529,
+      "z_S": -0.589,
+      "z_V": -0.23
+    },
+    {
+      "community": 16,
+      "size": 1,
+      "members": [
+        "37"
+      ],
+      "mean_raw_score": 1.55,
+      "z_T": 0.58,
+      "z_E": 0.38,
+      "z_S": 0.489,
+      "z_V": 0.654
+    },
+    {
+      "community": 17,
+      "size": 1,
+      "members": [
+        "43"
+      ],
+      "mean_raw_score": 1.15,
+      "z_T": -0.007,
+      "z_E": -0.377,
+      "z_S": -0.054,
+      "z_V": 0.552
+    },
+    {
+      "community": 18,
+      "size": 1,
+      "members": [
+        "59"
+      ],
+      "mean_raw_score": 1.117,
+      "z_T": -0.08,
+      "z_E": 0.301,
+      "z_S": -0.347,
+      "z_V": 0.049
+    },
+    {
+      "community": 19,
+      "size": 1,
+      "members": [
+        "64"
+      ],
+      "mean_raw_score": 1.083,
+      "z_T": 0.105,
+      "z_E": 0.079,
+      "z_S": -0.544,
+      "z_V": 0.015
+    },
+    {
+      "community": 20,
+      "size": 1,
+      "members": [
+        "67"
+      ],
+      "mean_raw_score": 1.467,
+      "z_T": 0.135,
+      "z_E": 0.5,
+      "z_S": 0.604,
+      "z_V": 0.412
+    },
+    {
+      "community": 21,
+      "size": 1,
+      "members": [
+        "69"
+      ],
+      "mean_raw_score": 1.102,
+      "z_T": -0.242,
+      "z_E": 0.169,
+      "z_S": -0.317,
+      "z_V": 0.053
+    },
+    {
+      "community": 22,
+      "size": 1,
+      "members": [
+        "84"
+      ],
+      "mean_raw_score": 1.034,
+      "z_T": -0.468,
+      "z_E": -0.003,
+      "z_S": -0.662,
+      "z_V": 0.837
+    },
+    {
+      "community": 23,
+      "size": 1,
+      "members": [
+        "89"
+      ],
+      "mean_raw_score": 0.817,
+      "z_T": -0.541,
+      "z_E": -0.221,
+      "z_S": -0.911,
+      "z_V": 0.114
     }
   ],
   "homophily": {

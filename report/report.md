@@ -34,7 +34,7 @@ header-includes: |
 
 # GitHub Link to Our Code
 
-**[https://github.com/Devansh-236/DPCN\_assignment-1-Autobots](https://github.com/Devansh-236/DPCN_assignment-1-Autobots)**
+**[https://github.com/Devansh-236/DPCN\_A1\_Autobots](https://github.com/Devansh-236/DPCN_A1_Autobots)**
 
 The repository contains the complete, reproducible pipeline. `python src/run_all.py` regenerates
 every number and every figure in this report from the raw CSV in one command.

@@ -29,7 +29,8 @@ header-includes: |
 | Roll number | Name |
 |:--|:--|
 | 2023102042 | Devansh Varshney |
-| [ROLL] | Vansh Agarwal |
+| 2023102043 | Vansh Agarwal |
+| 2023102031 | Aasrith Reddy Vedanaparti |
 
 # GitHub Link to Our Code
 
@@ -382,8 +383,9 @@ than on particular ties.
 
 | Member | Tasks completed |
 |:---|:---|
-| Devansh Varshney | [e.g. data cleaning and encoding decisions (`prepare_data.py`); similarity design, permutation null model and thresholding (`build_network.py`); dataset documentation and pipeline sections] |
-| Vansh Agarwal | [e.g. network metrics, community detection and random-graph baselines (`analyze.py`); all nine visualisations (`visualize.py`, `viz_style.py`); analysis, results and discussion sections] |
+| Devansh Varshney | [e.g. data interpretation and cleaning decisions (`prepare_data.py`); similarity design, permutation null model and thresholding (`build_network.py`); Dataset Documentation and Pipeline sections] |
+| Vansh Agarwal | [e.g. network metrics, centralities, community detection and random-graph baselines (`analyze.py`); Analysis and Visualizations section] |
+| Aasrith Reddy Vedanaparti | [e.g. all nine figures and the shared chart styling (`visualize.py`, `viz_style.py`); issue-network analysis; Results and Discussion section] |
 
-*Both members jointly reviewed the methodology, agreed the interpretation of the seven
+*All three members jointly reviewed the methodology, agreed the interpretation of the seven
 communities, and proof-read the final report.*

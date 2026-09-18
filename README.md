@@ -1,7 +1,7 @@
 # Opinion Network Formation from a Class Survey
 
 **Assignment 1 — Distributed Protocols for Computer Networks**
-Team **Autobots** — Devansh Varshney, Vansh Agarwal
+Team **Autobots** — Devansh Varshney, Vansh Agarwal, Aasrith Reddy Vedanaparti
 
 We build and analyse a weighted opinion network from a 60-item class survey covering
 Technology, Education, Ethics & Society and Environment. Nodes are respondents; an edge means

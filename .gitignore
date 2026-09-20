@@ -5,3 +5,6 @@ __pycache__/
 report/*.aux
 report/*.log
 report/*.out
+
+# report source is kept locally only; the repo ships the built PDF
+report.md

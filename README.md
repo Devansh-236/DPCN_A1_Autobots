@@ -7,7 +7,7 @@ We build and analyse a weighted opinion network from a 60-item class survey cove
 Technology, Education, Ethics & Society and Environment. Nodes are respondents; an edge means
 two people agree with each other *more than the class as a whole agrees about anything*.
 
-The full write-up is in [`report/report.pdf`](report/report.pdf).
+The full write-up is in [`report.pdf`](report.pdf).
 
 ## Headline results
 
@@ -38,12 +38,6 @@ python src/run_all.py
 
 That regenerates every number in `results/` and every figure in `figures/` from
 `data/Survey_Results_UC.csv`. Runtime is about 15 seconds.
-
-To rebuild the PDF (needs `pandoc` and a LaTeX engine such as `tectonic`):
-
-```bash
-cd report && pandoc report.md -o report.pdf --pdf-engine=tectonic
-```
 
 ## How the network is built
 
@@ -88,8 +82,7 @@ src/sklearn_free_ari.py        adjusted Rand index, dependency-free
 src/run_all.py                 runs the whole pipeline
 results/                       every intermediate artefact (CSV / JSON)
 figures/                       the ten figures as published
-report/report.md               report source
-report/report.pdf              the submitted report
+report.pdf                     the submitted report
 ```
 
 ### Key outputs in `results/`

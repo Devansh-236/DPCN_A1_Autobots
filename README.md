@@ -19,6 +19,9 @@ The full write-up is in [`report/report.pdf`](report/report.pdf).
 | Small-world $\sigma$ | **6.5** (clustered, but no longer to cross) |
 | Communities | **7**, modularity 0.677, 94% stable across restarts |
 | Respondents with no significant tie | **13** (30% of the class sits outside the giant component) |
+| Percolation regime | **supercritical** — $\langle k \rangle = 2.02$, past $\langle k \rangle = 1$, short of $\ln N = 4.47$ |
+| Giant component | **0.70** observed vs **0.80** from $S = 1 - e^{-\langle k \rangle S}$ |
+| Mean degree of a neighbour | $\langle k^2 \rangle / \langle k \rangle$ = **3.46** vs $\langle k \rangle$ = 2.02 — 62% of respondents are below their neighbours' average |
 | Agreement rate across all answers | **80%** — the class is overwhelmingly consensual |
 
 The most contested statements are all pedagogical (compulsory attendance, the validity of written
@@ -62,6 +65,11 @@ cd report && pandoc report.md -o report.pdf --pdf-engine=tectonic
 6. **Analyse** — global metrics, five centralities, weighted Louvain (best of 50 restarts),
    200 Erdős–Rényi and 200 configuration-model baselines, and an SVD of the opinion matrix for the
    latent axes.
+7. **Benchmark against theory** — the giant-component equation $S = 1 - e^{-\langle k \rangle S}$
+   solved by bisection, the degree-dispersion ratio $\mathrm{Var}(k)/\langle k \rangle$, the
+   neighbour-degree identity $\langle k^2 \rangle / \langle k \rangle$, the small-world estimate
+   $\ln N / \ln \langle k \rangle$ against chain, ring and lattice path lengths, and the Laplacian
+   spectrum (zero eigenvalues per component, algebraic connectivity $\lambda_2$).
 
 Every claim is re-checked on an independently constructed **mutual 5-nearest-neighbour** graph,
 which uses no threshold at all.

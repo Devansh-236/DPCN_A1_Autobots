@@ -16,7 +16,7 @@ import analyze
 
 FIGURES = ["fig_data_profile", "fig_similarity_and_threshold", "fig_threshold_sweep",
            "fig_network", "fig_structure", "fig_heatmap", "fig_community_profiles",
-           "fig_items", "fig_issue_network"]
+           "fig_items", "fig_issue_network", "fig_benchmarks"]
 
 
 def main():

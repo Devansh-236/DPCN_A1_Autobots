@@ -4,6 +4,7 @@ Everything printed here is written to results/analysis.json so the report quotes
 numbers that came out of the pipeline rather than numbers typed by hand.
 """
 import json
+import math
 from collections import defaultdict
 
 import numpy as np
@@ -108,6 +109,92 @@ def partition_labels(G, part):
     return [lab[v] for v in sorted(G.nodes())]
 
 
+
+def solve_giant_fraction(kbar, tol=1e-12):
+    """Solve S = 1 - exp(-<k> S) by bisection (no SciPy dependency).
+
+    S is the fraction of nodes in the giant component of an Erdos-Renyi graph with
+    mean degree <k>. S = 0 is always a root; a positive root exists only for <k> > 1.
+    """
+    if kbar <= 1.0:
+        return 0.0
+    f = lambda S: S - 1.0 + math.exp(-kbar * S)
+    lo, hi = 1e-12, 1.0 - 1e-15
+    if f(lo) * f(hi) > 0:
+        return 0.0
+    for _ in range(200):
+        mid = 0.5 * (lo + hi)
+        if f(lo) * f(mid) <= 0:
+            hi = mid
+        else:
+            lo = mid
+        if hi - lo < tol:
+            break
+    return 0.5 * (lo + hi)
+
+
+def random_graph_benchmarks(G, giant):
+    """Compare the observed network with the analytic results for a random graph of the
+    same mean degree, and with the structured topologies of known average path length."""
+    k = np.array([d for _, d in G.degree()], dtype=float)
+    n, kbar = len(k), float(k.mean())
+    var = float(k.var())
+
+    # mean degree of a neighbour, both ways: <k^2>/<k> and measured by walking edges
+    knn_theory = float((k ** 2).mean() / kbar)
+    nbr = [float(np.mean([G.degree(w) for w in G[v]])) for v in G if G.degree(v) > 0]
+
+    kg = float(np.mean([d for _, d in giant.degree()]))
+    ng = giant.number_of_nodes()
+    L_obs = nx.average_shortest_path_length(giant)
+
+    lap = nx.laplacian_matrix(G).todense().astype(float)
+    ev = np.sort(np.linalg.eigvalsh(lap))
+    lap_g = nx.laplacian_matrix(giant).todense().astype(float)
+    ev_g = np.sort(np.linalg.eigvalsh(lap_g))
+
+    S_pred = solve_giant_fraction(kbar)
+    p = nx.density(G)
+
+    if kbar < 1:
+        regime = "subcritical"
+    elif abs(kbar - 1) < 0.05:
+        regime = "critical"
+    elif kbar < math.log(n):
+        regime = "supercritical"
+    else:
+        regime = "connected"
+
+    return {
+        "mean_degree": round(kbar, 4),
+        "var_degree": round(var, 4),
+        "var_over_mean": round(var / kbar, 3),        # = 1 for Poisson / Erdos-Renyi
+        "neighbour_degree_theory": round(knn_theory, 3),
+        "neighbour_degree_measured": round(float(np.mean(nbr)), 3),
+        "neighbour_degree_excess": round(knn_theory - kbar, 3),
+        "neighbour_degree_er_excess": 1.0,            # ER gives exactly <k> + 1
+        "share_below_their_neighbours": round(
+            float(np.mean([G.degree(v) < m for v, m in
+                           zip([v for v in G if G.degree(v) > 0], nbr)])), 3),
+        "giant_fraction_predicted": round(S_pred, 4),
+        "giant_fraction_observed": round(giant.number_of_nodes() / n, 4),
+        "regime": regime,
+        "percolation_threshold_k": 1.0,
+        "connectivity_threshold_k": round(math.log(n), 3),
+        "clustering_theory_C_eq_p": round(p, 4),
+        "clustering_observed": round(nx.average_clustering(G), 4),
+        "clustering_over_theory": round(nx.average_clustering(G) / p, 2),
+        "giant_mean_degree": round(kg, 3),
+        "path_length_predicted": round(math.log(ng) / math.log(kg), 3),
+        "path_length_observed": round(L_obs, 3),
+        "chain_path_length": round((ng + 1) / 3, 2),
+        "ring_lattice_path_length": round(ng / 8, 2),
+        "lattice_2d_path_length": round(math.sqrt(ng), 2),
+        "laplacian_zero_eigenvalues": int((ev < 1e-9).sum()),
+        "algebraic_connectivity_giant": round(float(ev_g[1]), 4),
+    }
+
+
 def main():
     M = pd.read_csv(RESULTS / "opinion_matrix.csv", index_col=0)
     M.index = M.index.astype(str)
@@ -123,6 +210,7 @@ def main():
     res["main_network"], giant = global_metrics(G)
     res["knn_network"], _ = global_metrics(Gk)
     res["random_baselines"] = random_baselines(G)
+    res["benchmarks"] = random_graph_benchmarks(G, giant)
     c = res["main_network"]["avg_clustering"]; l = res["main_network"]["giant_avg_path_length"]
     rb = res["random_baselines"]
     res["small_world"] = {
@@ -313,7 +401,7 @@ def main():
 
     print(json.dumps({k: res[k] for k in
                       ["main_network", "knn_network", "random_baselines", "small_world",
-                       "communities", "communities_giant", "communities_knn", "homophily",
+                       "benchmarks", "communities", "communities_giant", "communities_knn", "homophily",
                        "latent_axes", "community_separation_F", "pc_vs_centrality_spearman",
                        "issue_network", "issue_communities", "domain_means"]},
                      indent=2, default=str))

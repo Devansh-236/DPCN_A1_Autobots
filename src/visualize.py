@@ -501,6 +501,88 @@ def fig_issue_network():
     save(fig, "fig9_issue_network.png")
 
 
+
+# --------------------------------------------------------------------------- #
+# 10 - the network against the analytic random-graph results
+# --------------------------------------------------------------------------- #
+def fig_benchmarks():
+    import math
+    b = ana["benchmarks"]
+    sw = pd.DataFrame(net["threshold_sweep"])
+    n = ana["main_network"]["nodes"]
+    sw["mean_degree"] = 2 * sw.edges / n
+
+    fig, axes = plt.subplots(1, 2, figsize=(9.0, 3.3), gridspec_kw={"wspace": 0.30})
+
+    # --- left: the emergence of the giant component ------------------------ #
+    ax = axes[0]
+    ks = np.linspace(0, 8.2, 400)
+    theory = []
+    for kk in ks:
+        S, f = 0.0, None
+        if kk > 1:
+            lo, hi = 1e-12, 1 - 1e-15
+            for _ in range(200):
+                mid = 0.5 * (lo + hi)
+                fl = lo - 1 + math.exp(-kk * lo)
+                fm = mid - 1 + math.exp(-kk * mid)
+                if fl * fm <= 0:
+                    hi = mid
+                else:
+                    lo = mid
+            S = 0.5 * (lo + hi)
+        theory.append(S)
+    ax.plot(ks, theory, color="#d03b3b", linewidth=2,
+            label="Erdős–Rényi:  $S = 1 - e^{-\\langle k \\rangle S}$")
+    ax.plot(sw.mean_degree, sw.giant_share, color=SERIES[0], marker="o", markersize=4,
+            markeredgecolor=SURFACE, markeredgewidth=1.0, label="our network, as $\\tau$ varies")
+    ax.axvline(1.0, color=INK_2, linewidth=1.1, linestyle=(0, (4, 3)))
+    ax.text(1.12, 0.93, "percolation\nthreshold $\\langle k \\rangle = 1$",
+            fontsize=7.2, color=INK_2, va="top")
+    ax.plot([b["mean_degree"]], [b["giant_fraction_observed"]], marker="o", markersize=10,
+            color=SERIES[0], markeredgecolor=INK, markeredgewidth=1.4, zorder=5)
+    ax.annotate(f"chosen $\\tau$:  {b['giant_fraction_observed']:.2f} observed\n"
+                f"vs {b['giant_fraction_predicted']:.2f} predicted",
+                (b["mean_degree"], b["giant_fraction_observed"]),
+                textcoords="offset points", xytext=(12, -26), fontsize=7.2, color=INK)
+    ax.set_xlabel("mean degree $\\langle k \\rangle$")
+    ax.set_ylabel("share of nodes in the giant component")
+    ax.set_xlim(0, 8.2); ax.set_ylim(-0.03, 1.06)
+    ax.set_title("A percolation transition, below the ER curve")
+    subtitle(ax, "Giant component vs mean degree, as the threshold is swept")
+    strip(ax, grid_axis="both"); ax.legend(loc="lower right")
+
+    # --- right: your neighbours have more ties than you do ------------------ #
+    ax = axes[1]
+    deg = dict(G.degree())
+    xs = [deg[v] for v in G if deg[v] > 0]
+    ys = [np.mean([deg[w] for w in G[v]]) for v in G if deg[v] > 0]
+    lim = max(max(xs), max(ys)) + 0.6
+    ax.plot([0, lim], [0, lim], color=INK_2, linewidth=1.2, linestyle=(0, (4, 3)),
+            zorder=1, label="equal (no paradox)")
+    above = [(x, y) for x, y in zip(xs, ys) if y > x]
+    below = [(x, y) for x, y in zip(xs, ys) if y <= x]
+    ax.scatter(*zip(*above), s=34, color=SERIES[0], edgecolors=SURFACE, linewidths=1.0,
+               zorder=3, label=f"more connected neighbours ({len(above)})")
+    ax.scatter(*zip(*below), s=34, color=SERIES[3], edgecolors=SURFACE, linewidths=1.0,
+               zorder=3, label=f"fewer or equal ({len(below)})")
+    ax.axhline(b["neighbour_degree_theory"], color="#d03b3b", linewidth=1.6)
+    ax.text(lim - 0.2, b["neighbour_degree_theory"] + 0.12,
+            f"$\\langle k^2 \\rangle / \\langle k \\rangle$ = {b['neighbour_degree_theory']:.2f}",
+            fontsize=7.4, color="#d03b3b", ha="right")
+    ax.axvline(b["mean_degree"], color=INK_2, linewidth=1.0)
+    ax.text(b["mean_degree"] + 0.12, 0.2,
+            f"$\\langle k \\rangle$ = {b['mean_degree']:.2f}", fontsize=7.4, color=INK_2)
+    ax.set_xlim(0, lim); ax.set_ylim(0, lim)
+    ax.set_xlabel("a respondent's number of ties")
+    ax.set_ylabel("mean ties of their neighbours")
+    ax.set_title("Your neighbours have more ties than you do")
+    subtitle(ax, f"{b['share_below_their_neighbours']:.0%} of connected respondents "
+                 f"sit above the diagonal")
+    strip(ax, grid_axis="both"); ax.legend(loc="upper left")
+    save(fig, "fig10_benchmarks.png")
+
+
 if __name__ == "__main__":
     fig_data_profile()
     fig_similarity_and_threshold()
@@ -511,3 +593,4 @@ if __name__ == "__main__":
     fig_community_profiles()
     fig_items()
     fig_issue_network()
+    fig_benchmarks()

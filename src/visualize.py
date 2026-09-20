@@ -108,8 +108,8 @@ def fig_data_profile():
     ax.set_xlim(-3, 63); ax.set_ylim(0, counts.max() * 1.18)
     ax.set_xlabel("items answered (of 60)"); ax.set_ylabel("respondents")
     ax.set_title("Dropout is block-wise, not scattered")
-    subtitle(ax, "Respondents stop at block boundaries — 0, 15, 45 or 50 items — "
-                 "so a\ncompleteness cut-off removes whole non-participants, not opinions")
+    subtitle(ax, "Respondents stop at block boundaries (0, 15, 45 or 50 items), so a"
+                 "\ncompleteness cut-off removes whole non-participants, not opinions")
     strip(ax); ax.legend(loc="upper left")
     save(fig, "fig1_data_profile.png")
 
@@ -232,7 +232,7 @@ def fig_network():
         ax.annotate(f"#{v}", pos[v], textcoords="offset points", xytext=(10, 7),
                     fontsize=7.3, color=INK_2, zorder=7)
     ax.axhline(0.225, color=GRID, linewidth=1.2)
-    ax.text(0.005, 0.195, "FRAGMENTS AND ISOLATES  —  30% of the class has no significant tie",
+    ax.text(0.005, 0.195, "FRAGMENTS AND ISOLATES:  30% of the class has no significant tie",
             fontsize=7.3, color=INK_MUTED, fontweight="bold")
     ax.set_xlim(-0.03, 1.03); ax.set_ylim(-0.02, 1.06)
     ax.set_title("The opinion network: a small clustered core, and a third of the class outside it")
@@ -364,8 +364,8 @@ def fig_community_profiles():
                edgecolors=SURFACE, linewidths=1.2, zorder=2)
     ax.axhline(0, color=GRID, linewidth=1); ax.axvline(0, color=GRID, linewidth=1)
     v1, v2 = ana["latent_axes"]["explained_variance_top5"][:2]
-    ax.set_xlabel(f"PC1 — breadth of endorsement  ({v1:.1%} of variance)")
-    ax.set_ylabel(f"PC2 — AI-governance concern  ({v2:.1%})")
+    ax.set_xlabel(f"PC1: breadth of endorsement  ({v1:.1%} of variance)")
+    ax.set_ylabel(f"PC2: AI-governance concern  ({v2:.1%})")
     ax.set_title("The same clusters separate on the latent axes")
     subtitle(ax, f"Between-community separation: F(6,58) = {ana['community_separation_F']['PC1'][0]} on PC1")
     strip(ax, grid_axis="both")
